@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Plans Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Plans</h1>
+<p>Plan A</p>
+<p>Plan B</p>
+<p>Plan C</p>
+
+<form action="#" th:action="@{/plans}" th:object="${plan}" method="post">
+    <p>Choose a plan: <input type="text" th:field="*{name}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+<form action="#" th:action="@{/question}" th:object="${question}" method="post">
+    <p>Ask a question: <input type="text" th:field="*{content}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+</body>
+</html>
